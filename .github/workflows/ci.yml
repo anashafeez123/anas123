@@ -33,9 +33,9 @@ jobs:
       with:
         arguments: build
         name: build and push docker     
-   uses: mr-smithers-excellent/docker-build-push@v3
-   with:
-    image: anashafeez/newproject
-    registry: docker.io
-    username: ${{ secrets.DOCKER_USERNAME }}
-    password: ${{ secrets.DOCKER_PASSWORD }} 
+    - uses: mr-smithers-excellent/docker-build-push@v3
+      with:
+        image: anashafeez/newproject
+        registry: docker.io
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }} 
